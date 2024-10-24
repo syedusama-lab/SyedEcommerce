@@ -195,6 +195,7 @@ const Shop = ({ selectedCategory }) => {
 
   // Handle adding products to the cart
   const handleAddToCart = (event, product) => {
+    event.stopPropagation();
     dispatch(addToCart(product));
     alert("Added successfully");
   };
