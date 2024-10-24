@@ -21,6 +21,13 @@ const Home = ({ selectedCategory }) => {
                 of high-quality items that meet your expectations. Shop with us
                 today and experience the difference.
               </p>
+              <h1 className="text-xl mt-4 font-semibold">Note:</h1>
+              <p className="text-gray-600">
+                You can buy products only when you are logged in. Please go to
+                the login form, and if you don't have an account, you can use
+                the dummy credentials available by clicking on the "Don't have
+                an account?" button.
+              </p>
             </div>
             {/* <button onClick={handleToast}>TOASSTTT</button> */}
             <div className="md:w-1/2 flex justify-center">

@@ -55,11 +55,11 @@ const Login = ({ setIsLogin, setUser, setIsModalOpen }) => {
             credentials to log in and order products.
           </h1>
           <div>
-            <h2>For Testing Purpose</h2>
+            <p className="text-sm">Dummy User For Testing Purpose</p>
             <p>
               Email:{" "}
-              <span className="font-medium text-red-500">test@mail.com</span>{" "}
-              Password: <span className="font-medium text-red-500">test</span>
+              "<span className="font-medium text-red-500 underline">test@mail.com</span>"{" "}
+              Password: "<span className="font-medium text-red-500 underline">test</span>"
             </p>
           </div>
           <h2>Thanks.</h2>
@@ -97,9 +97,10 @@ const Login = ({ setIsLogin, setUser, setIsModalOpen }) => {
                 <input type="checkbox" className="form-checkbox" />
                 <span className="ml-2 text-gray-700">Remeber Me</span>
               </label>
-              <a href="" className="text-red-800">
+              <p className="text-red-500 hover:text-red-800 hover:cursor-pointer ">Forget Password</p>
+              {/* <a href="" className="text-red-800">
                 Forget Password
-              </a>
+              </a> */}
             </div>
             <div className="mb-4">
               <button className="w-full bg-red-600 text-white py-2">
