@@ -274,7 +274,11 @@ const Shop = ({ selectedCategory }) => {
                   />
                   <h2 className="text-xl font-semibold">{product.title}</h2>
                   <p className="text-gray-500">{product.category}</p>
-                  <p className={`text-lg font-bold mt-2 ${product.stock == 0 && "mb-12"}`}>
+                  <p
+                    className={`text-lg font-bold mt-2 ${
+                      product.stock == 0 && "mb-12"
+                    } ${btn ? "" : "mb-[-1px]"}`}
+                  >
                     ${product.price.toFixed(2)}
                     <span className="font-semibold text-[16px] "> /pack</span>
                   </p>
@@ -307,7 +311,7 @@ const Shop = ({ selectedCategory }) => {
         <Footer />
       </div>
       <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
-        <ProductDetail product={selectedProduct}/>
+        <ProductDetail product={selectedProduct} />
       </Modal>
     </>
   );
