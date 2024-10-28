@@ -205,19 +205,13 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
           </div>
         ) : (
           <>
-            <div className="w-full h-7 font-semibold overflow-hidden relative">
+            <div className="w-full h-7 bg-red-400 overflow-hidden relative">
               <div
                 className="flex absolute whitespace-nowrap"
                 style={{
-                  animation: "marquee 60s linear infinite",
+                  animation: "marquee 80s linear infinite",
                 }}
               >
-                <span className="mr-10">
-                  You can buy products only when you are logged in. Please go to
-                  the login form, and if you don't have an account, you can use
-                  the dummy credentials available by clicking on the "Don't have
-                  an account?" button.
-                </span>
                 <span className="mr-10">
                   You can buy products only when you are logged in. Please go to
                   the login form, and if you don't have an account, you can use
@@ -237,7 +231,7 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
               {`
                 @keyframes marquee {
                   0% {
-                    transform: translateX(0%);
+                    transform: translateX(10%);
                   }
                   100% {
                     transform: translateX(-50%);
