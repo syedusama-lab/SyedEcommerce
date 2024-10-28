@@ -20,7 +20,6 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
 
- 
   useEffect(() => {
     const getDataFromApi = async () => {
       try {
@@ -71,7 +70,11 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
         <nav className="w-full py-1 md:pl-8 md:pr-8 pt-2 flex items-center justify-between ">
           {/* Logo + Website Name */}
           <div className="flex items-center">
-            <img src="/assets/product_images/logo.avif" alt="Logo" className="w-11 h-11 rounded-lg mr-1" />
+            <img
+              src="/assets/product_images/logo.avif"
+              alt="Logo"
+              className="w-11 h-11 rounded-lg mr-1"
+            />
             <span className="font-bold md:text-lg">TastyRush</span>
           </div>
 
@@ -189,11 +192,60 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
         </nav>
         {isLogin ? (
           <div className="w-full flex  justify-between px-2 md:px-10 pb-1">
-            <p>User Name: <span className="font-semibold text-blue-600">{user}</span></p>
-            <p className="hover:cursor-pointer hover:underline hover:text-blue-500 uppercase" onClick={handleLogout}>logout</p>
+            <p>
+              User Name:{" "}
+              <span className="font-semibold text-blue-600">{user}</span>
+            </p>
+            <p
+              className="hover:cursor-pointer hover:underline hover:text-blue-500 uppercase"
+              onClick={handleLogout}
+            >
+              logout
+            </p>
           </div>
         ) : (
-          <></>
+          <>
+            <div className="w-full h-7 font-semibold overflow-hidden relative">
+              <div
+                className="flex absolute whitespace-nowrap"
+                style={{
+                  animation: "marquee 60s linear infinite",
+                }}
+              >
+                <span className="mr-10">
+                  You can buy products only when you are logged in. Please go to
+                  the login form, and if you don't have an account, you can use
+                  the dummy credentials available by clicking on the "Don't have
+                  an account?" button.
+                </span>
+                <span className="mr-10">
+                  You can buy products only when you are logged in. Please go to
+                  the login form, and if you don't have an account, you can use
+                  the dummy credentials available by clicking on the "Don't have
+                  an account?" button.
+                </span>
+                <span>
+                  You can buy products only when you are logged in. Please go to
+                  the login form, and if you don't have an account, you can use
+                  the dummy credentials available by clicking on the "Don't have
+                  an account?" button.
+                </span>
+              </div>
+            </div>
+
+            <style jsx>
+              {`
+                @keyframes marquee {
+                  0% {
+                    transform: translateX(0%);
+                  }
+                  100% {
+                    transform: translateX(-50%);
+                  }
+                }
+              `}
+            </style>
+          </>
         )}
 
         <div className="w-full flex justify-center md:space-x-10 space-x-5">
