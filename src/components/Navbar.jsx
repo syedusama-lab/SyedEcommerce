@@ -209,7 +209,7 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
               <div
                 className="flex absolute whitespace-nowrap"
                 style={{
-                  animation: "marquee 60s linear infinite",
+                  animation: "marquee 25s linear infinite",
                 }}
               >
                 <span className="mr-10">
