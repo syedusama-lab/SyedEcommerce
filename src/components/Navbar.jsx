@@ -205,7 +205,7 @@ const Navbar = ({ user, setUser, setSelectedCategory, selectedCategory }) => {
           </div>
         ) : (
           <>
-            <div className="w-full h-7 overflow-hidden relative">
+            <div className="w-full h-7 font-semibold text-[#3e64ff] overflow-hidden relative">
               <div
                 className="flex absolute whitespace-nowrap"
                 style={{
